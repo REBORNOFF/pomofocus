@@ -1,0 +1,237 @@
+body {
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    background-color: #6f3c3c;
+    color: #FFF;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5)
+}
+
+.modal__dialog {
+    max-width: 400px;
+    margin: 178px auto 0 auto;
+}
+
+.modal__content {
+    position: relative;
+    max-width: 500px;
+    padding: 40px;
+    background-color: #8f4c4c;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 30px;
+    color: #FFF;
+    opacity: .5;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.settings__row:last-child {
+    margin-bottom: 0;
+}
+
+.settings__title {
+    color: #FFF;
+}
+
+.settings__duration {
+    width: 40px;
+    border: none;
+
+    display: block;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.pomo__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pomo__title {
+    margin-right: 30px;
+    font-size: 30px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    opacity: 0.9;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    background: none rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    margin-left: 10px;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    min-width: 70px;
+    border: none;
+    transition: background ease-in-out .3s;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color ease-in-out .3s;
+}
+
+.button__img {
+    width: 16px;
+    height: 16px;
+}
+
+.button__title {
+    font-size: 13px;
+    color: #FFF;
+}
+
+.button__title-offset {
+    margin-left: 6px;
+}
+
+.timer {
+    max-width: 480px;
+    margin: 0 auto 20px auto;
+    padding: 14px 0;
+    background-color: #8f4c4c;
+    border-radius: 10px;
+}
+
+.timer__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.timer__time {
+    font-size: 120px;
+}
+
+.tasks {
+
+}
+
+.tasks__input {
+    border: none;
+    border-radius: 10px;
+    outline:none;
+    padding: 10px;
+    margin: 10px 0;
+    width: 320px;
+}
+
+.tasks__block {
+    display: flex;
+    justify-content: center;
+}
+
+.tasks__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #957070;
+    border-radius: 10px;
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+}
+
+.tasks__item-current {
+    color: #FFF;
+    font-size: 16px;
+    background-color: #c75656;
+    text-transform: uppercase;
+}
+
+.button__wrapper {
+    margin-left: 60px;
+    flex-wrap: wrap;
+}
+
+.tasks__button {
+    padding: 8px 12px;
+    opacity: 0.9;
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    background: none rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    margin-left: 10px;
+    font-size: 13px;
+    min-width: 70px;
+    border: none;
+    transition: background ease-in-out .3s;
+}
+
+.tasks__button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color ease-in-out .3s;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='./styles.css'>
+	<title>Pomofocus</title>
+</head>
+<body>
+<main class='main'>
+	<section class='pomo container'>
+		<div class='pomo__header'>
+			<h1 class='pomo__title'>Pomofocus</h1>
+			<button id='settings_btn' class='button'>
+				<img class='button__img' src='./images/settings.svg' alt='settings'>
+				<div class='button__title button__title-offset'>Settings</div>
+			</button>
+		</div>
+	</section>
+	<div class='timer container'>
+		<div id='buttons' class='timer__buttons'>
+			<button id='start' class='button'>
+				<div class='button__title'>Start</div>
+			</button>
+			<button id='pause' class='button'>
+				<div class='button__title'>Pause</div>
+			</button>
+			<button id='reset' class='button'>
+				<div class='button__title'>Reset</div>
+			</button>
+			<button id='skip' class='button'>
+				<div class='button__title'>Skip</div>
+			</button>
+		</div>
+		<div id='timer' class='timer__time'>25:00</div>
+	</div>
+	<div class='tasks container'>
+		<input class='tasks__input' type='text' id='task-input' placeholder='Add a task...'>
+		<div class='tasks__block'>
+			<ul id='task-list' class='tasks__list'></ul>
+		</div>
+	</div>
+</main>
+
+<div class='modal'>
+	<div class='modal__dialog'>
+		<div class='modal__content'>
+			<div class='modal__close' data-close>&times</div>
+			<div class='settings'>
+				<div class='settings__row'>
+					<label class='settings__title' for='work-duration'>Work Duration (minutes):</label>
+					<input class='settings__duration' type='number' id='work-duration' value='25' min='1'>
+				</div>
+				<div class='settings__row'>
+					<label class='settings__title' for='short-break-duration'>Short Break Duration (minutes):</label>
+					<input class='settings__duration' type='number' id='short-break-duration' value='5' min='1'>
+				</div>
+				<div class='settings__row'>
+					<label class='settings__title' for='long-break-duration'>Long Break Duration (minutes):</label>
+					<input class='settings__duration' type='number' id='long-break-duration' value='15' min='1'>
+				</div>
+				<div class='settings__row'>
+					<label class='settings__title' for='pomodoro-count'>Pomodoro Count:</label>
+					<input class='settings__duration' type='number' id='pomodoro-count' value='4' min='1'>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src='js/main.js' type='module'></script>
+</body>
+</html>
