@@ -58,9 +58,15 @@ ul {
     cursor: pointer;
 }
 
+.modal__buttons {
+    display: flex;
+    justify-content: center;
+}
+
 .settings {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .settings__row {
@@ -81,7 +87,6 @@ ul {
 .settings__duration {
     width: 40px;
     border: none;
-
     display: block;
     padding: 0.375rem 0.75rem;
     font-family: inherit;

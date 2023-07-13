@@ -1,4 +1,4 @@
-import { modal, openModal } from './modal.js';
+import { closeModal, modal, openModal } from './modal.js';
 
 let workDuration = 25 * 60; // 25 минут работы (в секундах)
 let shortBreakDuration = 5 * 60; // 5 минут короткого перерыва (в секундах)
@@ -17,6 +17,8 @@ const startButton = document.getElementById('start');
 const pauseButton = document.getElementById('pause');
 const resetButton = document.getElementById('reset');
 const skipButton = document.getElementById('skip');
+const modalSaveButton = document.getElementById('modal-save');
+const modalCloseButton = document.getElementById('modal-close');
 const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
 const workDurationInput = document.getElementById('work-duration');
@@ -91,8 +93,6 @@ function resetTimer() {
 
 // Обработчик события для кнопки "Start"
 startButton.addEventListener('click', function () {
-	updateSettings();
-
 	if (!timerInterval) {
 		startButton.disabled = true;
 		pauseButton.disabled = false;
@@ -210,11 +210,18 @@ function renderTaskList() {
 	});
 }
 
+// Обработчик события для кнопки "Save"
+modalSaveButton.addEventListener('click', () => {
+	updateSettings();
+});
+
+// Обработчик события для кнопки "Close"
+modalCloseButton.addEventListener('click', () => {
+	closeModal('.modal');
+});
+
+// Обработчик события для кнопки "Settings"
 settings_btn.addEventListener('click', () => {
 	openModal('.modal');
 	modal('.modal');
 });
-
-// Инициализация
-updateSettings();
-renderTaskList();
